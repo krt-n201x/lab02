@@ -12,14 +12,17 @@ const app = Vue.createApp({
             //     { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg', quantity: 0 }
             // ],
             // selectedVariant: 0,
-            cart: 0,
+            cart: [],
             premium: true,
             detail: true
             // onSale: true
 
         }
     },
-    // methods: {
+    methods: {
+        updateCart(id) {
+            this.cart.push(id);
+        }
     //     addToCart() {
     //         this.cart += 1
     //     },
@@ -43,5 +46,5 @@ const app = Vue.createApp({
     //     inStock(){
     //         return this.variants[this.selectedVariant].quantity
     //     }
-    // }
+    }
 })
