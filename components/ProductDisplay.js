@@ -90,9 +90,26 @@ app.component ('product-display', {
 })
 
 app.component ('product-detail', {
+    props: {
+        detail: {
+            type: Boolean,
+            required: true
+        }
+    },
+    
     template:
         /*html*/
-        `<div>
-        <h1>Hello from another component</h1>
-        </div>`
+        `
+                <p>{{another}}</p>
+                
+        `,
+        
+        computed: {
+            another() {
+                if (this.detail) {
+                    return 'Hello from another component'
+                }
+                return 'it is false'
+            }
+        }
 })
