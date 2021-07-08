@@ -22,6 +22,9 @@ const app = Vue.createApp({
     methods: {
         updateCart(id) {
             this.cart.push(id);
+        },
+        removeCart() {
+            this.cart.splice(this.cart.length-1,1) ;
         }
     //     addToCart() {
     //         this.cart += 1
