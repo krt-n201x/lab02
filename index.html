@@ -16,7 +16,7 @@
 
         <div class="cart">Cart({{ cart }})</div>
 
-        <div class="product-display">
+        <!-- <div class="product-display">
             <div class="product-container">
                 <div class="product-image" >
                     <div :class="{outofstockimg: !inStock}"><img :src="image" ></div>
@@ -34,11 +34,15 @@
                     <button class=" button " :disabled='!inStock' :class="{disabledButton: !inStock}" @click="addToCart ">Add to Cart</button>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <product-display :premium="premium"></product-display>
+        <product-detail></product-detail>
     </div>
 
     <!-- Import Js -->
     <script src="./main.js "></script>
+    <!-- Import components -->
+    <script src="./components/ProductDisplay.js"></script>
     <script>
         const mountedApp = app.mount('#app')
     </script>
